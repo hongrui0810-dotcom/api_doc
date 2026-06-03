@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="api_errors">
-    <title>API Error Codes</title>
+    <title>API Error Code Table</title>
     <refbody>
+        <section>
+            <note type="attention">
+                Please verify the following codes and solutions. 
+            </note>
+        </section>
         <table>
             <tgroup cols="4">
                 <colspec colname="code" colwidth="1*"/>
