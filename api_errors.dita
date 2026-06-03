@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="api_errors">
+    <title>API Error Codes</title>
+    <refbody>
+        <table>
+            <tgroup cols="4">
+                <colspec colname="code" colwidth="1*"/>
+                <colspec colname="name" colwidth="1.5*"/>
+                <colspec colname="desc" colwidth="2.5*"/>
+                <colspec colname="solution" colwidth="2.5*"/>
+                <thead>
+                    <row>
+                        <entry>Code</entry>
+                        <entry>Name</entry>
+                        <entry>Description</entry>
+                        <entry>Solution</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><b>400</b></entry>
+                        <entry>Bad Request</entry>
+                        <entry>The request contains invalid or missing data.</entry>
+                        <entry>Verify all required fields before sending the request.</entry>
+                    </row>
+                    <row>
+                        <entry><b>401</b></entry>
+                        <entry>Unauthorized</entry>
+                        <entry>Authentication failed.</entry>
+                        <entry>Check that the API key is valid and correctly configured.</entry>
+                    </row>
+                    <row>
+                        <entry><b>404</b></entry>
+                        <entry>Not Found</entry>
+                        <entry>The requested resource does not exist.</entry>
+                        <entry>Verify the endpoint URL and resource identifier.</entry>
+                    </row>
+                    <row>
+                        <entry><b>500</b></entry>
+                        <entry>Internal Server Error</entry>
+                        <entry>An unexpected server error occurred.</entry>
+                        <entry>Retry the request later or contact support.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="api_endpoints">
+    <title>API Endpoints</title>
+    <refbody>
+        <table>
+            <tgroup cols="6">
+                <colspec colname="method" colwidth="1*"/>
+                <colspec colname="url" colwidth="1.5*"/>
+                <colspec colname="desc" colwidth="2*"/>
+                <colspec colname="params" colwidth="1.5*"/>
+                <colspec colname="reqbody" colwidth="2.5*"/>
+                <colspec colname="response" colwidth="2.5*"/>
+                <thead>
+                    <row>
+                        <entry>Method</entry>
+                        <entry>URL</entry>
+                        <entry>Description</entry>
+                        <entry>Parameters</entry>
+                        <entry>Request Body</entry>
+                        <entry>Response</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><b>GET</b></entry>
+                        <entry><codeph>/orders</codeph></entry>
+                        <entry>Returns a list of all orders.</entry>
+                        <entry>None</entry>
+                        <entry>N/A</entry>
+                        <entry>
+                            <b>200</b>
+                            <codeblock>[
+                                {
+                                "id": 101,
+                                "customer": "John Smith",
+                                "status": "Processing"
+                                }
+                                ]</codeblock>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry><b>POST</b></entry>
+                        <entry><codeph>/orders</codeph></entry>
+                        <entry>Creates a new order.</entry>
+                        <entry>None</entry>
+                        <entry>
+                            <p><b>Fields:</b></p>
+                            <ul>
+                                <li><parmname>customer</parmname> (string, required)</li>
+                                <li><parmname>product</parmname> (string, required)</li>
+                                <li><parmname>quantity</parmname> (integer, required)</li>
+                            </ul>
+                            <p><b>Example:</b></p>
+                            <codeblock>{
+                                "customer": "John Smith",
+                                "product": "Laptop",
+                                "quantity": 1
+                                }</codeblock>
+                        </entry>
+                        <entry>
+                            <b>201</b>
+                            <codeblock>{
+                                "id": 102,
+                                "status": "Created"
+                                }</codeblock>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry><b>GET</b></entry>
+                        <entry><codeph>/orders/{id}</codeph></entry>
+                        <entry>Returns details for a specific order.</entry>
+                        <entry>
+                            <ul>
+                                <li><parmname>id</parmname> (integer) – Unique order identifier.</li>
+                            </ul>
+                        </entry>
+                        <entry>N/A</entry>
+                        <entry>
+                            <b>200</b>
+                            <codeblock>{
+                                "id": 101,
+                                "customer": "John Smith",
+                                "product": "Laptop",
+                                "quantity": 1,
+                                "status": "Processing"
+                                }</codeblock>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

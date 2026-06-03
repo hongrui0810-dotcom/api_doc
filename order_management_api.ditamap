@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Order Management API Documentation</title>
+    <topicref href="api_overview.dita" navtitle="Overview"/>
+    <topicref href="api_endpoints.dita" navtitle="Endpoints"/>
+    <topicref href="api_errors.dita" navtitle="Error Codes"/>
+</map>
